@@ -9,14 +9,16 @@ class BocBai extends React.Component {
     description:
       "Người chơi phải nối một từ vào từ cuối của từ trước đó, nếu không thể hoặc nối sai từ thì phải uống.",
   };
+
   render() {
+    let { id, name, des } = this.props;
+
     return (
       <div className="BocBai">
         <img className="imgLaBai" src={logo}></img>
-
         <div className="content">
-          <div className="name">{this.state.name}</div>
-          <div className="des">{this.state.description}</div>
+          <div className="name">{name}</div>
+          <div className="des">{des}</div>
         </div>
       </div>
     );
