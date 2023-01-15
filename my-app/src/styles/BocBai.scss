@@ -6,7 +6,8 @@
     .imgmattruoc
     {
         // display: none;
-        position: absolute;
+        position: relative;
+
     }
     .imgLaBai
     {
@@ -47,5 +48,29 @@
 
                 
         }
+    }
+    .btnOK
+    {
+        background-color: rgb(35, 63, 221);
+        color:rgb(255, 255, 255);
+        padding: 1vh;
+        border-radius: 0.5em;
+        border:none;
+        margin-left: 5px;
+        box-shadow: 0 6px 0 rgb(23, 35, 145);
+        transition: .5s;
+        &:hover
+        {
+            background-color: rgba(48, 17, 119, 0.664);
+    
+        }
+    
+    
+        &:active
+        {
+            box-shadow: none;
+            transform: translateY(5px);
+        }
+    
     }
 }

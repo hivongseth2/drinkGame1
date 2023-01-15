@@ -7,7 +7,7 @@ class GameMain extends React.Component {
     return (
       <>
         <div>
-          <img src={logo}></img>
+          <img className="introImg" src={logo}></img>
         </div>
       </>
     );

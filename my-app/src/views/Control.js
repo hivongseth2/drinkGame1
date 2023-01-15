@@ -345,38 +345,46 @@ class Control extends React.Component {
     let list = this.state.list;
     if (list.length == 0) {
       toast.error("Đã hết bài");
+      return;
     }
     let name;
     let des;
-    let idla = Math.floor(Math.random() * 6); // pham vi hang chuc sua lai thanh 101
+    let idla = Math.floor(Math.random() * 41); // pham vi hang chuc sua lai thanh 101
 
-    while (idla == this.state.cr_id) {
-      idla = Math.floor(Math.random() * 6); // pham vi hang chuc sua lai thanh 101
-    }
-    let check = false;
+    // while (idla == this.state.cr_id) {
+    //   idla = Math.floor(Math.random() * 5); // pham vi hang chuc sua lai thanh 101
+    // }
+    let kt = false;
+    console.log(this.state.list);
     list.map((item, index) => {
-      if (item.id === idla) {
+      if (item.id == idla) {
         this.setState({
           cr_id: item.id,
           cr_name: item.name,
           cr_description: item.description,
           stt: false,
         });
-        check = true;
+
+        kt = true;
         // toast.success("Đã rút bài thành công");
-        return;
-      }
-      if (check == false) {
-        // console.log("aaaaaaaaaaaaaaa");
-        // this.setState({
-        //   cr_id: "",
-        //   cr_name: "",
-        //   cr_description: "",
-        //   stt: true,
-        // });
-        this.BocBai();
       }
     });
+
+    // console.log("aaaaaaaaaaaaaaa");
+    // this.setState({
+    //   cr_id: "",
+    //   cr_name: "",
+    //   cr_description: "",
+    //   stt: true,
+    // });
+    // this.BocBai();
+    // console.log("tu boc id : " + idla);
+    // while (this.state.check) {
+    if (!kt) {
+      return this.BocBai();
+    }
+    document.getElementById("buttonBoc").click();
+
     // this.setState({
     //   stt: false,
     // });
@@ -395,6 +403,7 @@ class Control extends React.Component {
           {
             <button
               className="btnBoc"
+              id="buttonBoc"
               disabled={!this.state.stt}
               onClick={() => this.BocBai()}
             >
