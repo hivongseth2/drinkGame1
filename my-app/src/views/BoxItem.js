@@ -18,6 +18,11 @@ class BoxItem extends React.Component {
       list: this.props.list,
     });
   }
+  componentWillReceiveProps() {
+    this.setState({
+      list: this.props.list,
+    });
+  }
 
   openModal = () => {
     this.setState({ isOpen: true });
