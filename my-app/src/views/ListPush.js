@@ -56,7 +56,7 @@ class ListPush extends React.Component {
     // let isEmpty = Object.keys().length === 0;
 
     let count = 0;
-    console.log(list);
+    // console.log(list);
     // });
     return (
       <>

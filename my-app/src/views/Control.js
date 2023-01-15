@@ -1,6 +1,13 @@
 import React from "react";
 import "../styles/Control.scss";
 import BocBai from "./BocBai";
+
+import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
+
+import BoxItem from "./BoxItem";
+import Button from "react-bootstrap/Button";
+// import Form from "react-bootstrap-form";
 // import { toast, ToastContainer } from "react-toastify/dist/components";
 import { toast } from "react-toastify";
 
@@ -258,6 +265,7 @@ class Control extends React.Component {
     cr_name: "",
     cr_description: "",
     stt: true,
+    isOpen: true,
   };
   // componentDidMount() {
   //   let { list } = this.state;
@@ -331,6 +339,20 @@ class Control extends React.Component {
   //   });
   // }
 
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     showModal: true,
+  //   };
+  // }
+  // close() {
+  //   this.setState({ showModal: false });
+  // }
+
+  openModal = () => this.setState({ isOpen: true });
+  closeModal = () => this.setState({ isOpen: false });
+  // handleSubmit(name) => //some code
+
   deleteItem = (itemx) => {
     let currentItem = this.state.list;
 
@@ -399,7 +421,19 @@ class Control extends React.Component {
     return (
       <div className="menuControl">
         <ul>
-          <button className="btnXoc">Xóc bài</button>
+          <button className="btnXoc" onClick={this.openModal}>
+            Xóc bài
+          </button>
+
+          {this.state.isOpen ? (
+            <BoxItem
+              closeModal={this.closeModal}
+              isOpen={this.state.isOpen}
+              handleSubmit={this.handleSubmit}
+              list={this.state.list}
+            />
+          ) : null}
+
           {
             <button
               className="btnBoc"
@@ -422,6 +456,8 @@ class Control extends React.Component {
           stt={this.state.stt}
           del={this.deleteItem}
         />
+
+        {/* <BoxItem stt={this.state.showModal} /> */}
       </div>
     );
   }
