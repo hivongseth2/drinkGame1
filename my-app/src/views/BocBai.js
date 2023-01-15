@@ -11,15 +11,15 @@ class BocBai extends React.Component {
     description: "",
   };
 
-  // componentDidMount() {
-  //   //   console.log(res.data.data);
-  //   this.setState({
-  //     id: this.props.id,
-  //     name: this.props.name,
-  //     description: this.props.des,
-  //   });
-  //   console.log(this.state);
-  // }
+  componentDidMount() {
+    //   console.log(res.data.data);
+    this.setState({
+      id: this.props.id,
+      name: this.props.name,
+      description: this.props.des,
+    });
+    // console.log(this.state);
+  }
   componentWillReceiveProps() {
     this.setState({
       id: this.props.id,
@@ -28,12 +28,20 @@ class BocBai extends React.Component {
     });
   }
   btnXacNhan = () => {
+    let crI = this.props.id;
+    this.deleteCo(crI);
     this.setState({
       id: "",
       name: "",
       des: "",
     });
-    console.log(this.state);
+    this.props.setStt(true);
+    // console.log(this.props.stt);
+  };
+
+  deleteCo = (item) => {
+    this.props.del(item);
+    console.log(item);
   };
 
   render() {
@@ -58,8 +66,8 @@ class BocBai extends React.Component {
     // });
     return (
       <div className="BocBai">
-        {console.log(this.state)}
-        {this.state.id == "" ? (
+        {/* {console.log(this.state)} */}
+        {this.props.stt === true ? (
           <img className="imgmattruoc" src={logo1}></img>
         ) : (
           <>

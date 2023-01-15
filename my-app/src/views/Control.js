@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/Control.scss";
 import BocBai from "./BocBai";
+// import { toast, ToastContainer } from "react-toastify/dist/components";
+import { toast } from "react-toastify";
 
 class Control extends React.Component {
   state = {
@@ -255,21 +257,134 @@ class Control extends React.Component {
     cr_id: "",
     cr_name: "",
     cr_description: "",
+    stt: true,
+  };
+  // componentDidMount() {
+  //   let { list } = this.state;
+  //   let name;
+  //   let des;
+  //   let idla = Math.floor(Math.random() * 6); // pham vi hang chuc sua lai thanh 101
+
+  //   while (idla == this.state.cr_id) {
+  //     idla = Math.floor(Math.random() * 6); // pham vi hang chuc sua lai thanh 101
+  //   }
+  //   // list.map((item, index) => {
+  //   //   if (item.id == idla) {
+  //   //     this.setState({
+  //   //       cr_id: item.id,
+  //   //       cr_name: item.name,
+  //   //       cr_description: item.description,
+  //   //     });
+  //   //   }
+  //   //    if (check == false) {
+  //   //     console.log("aaaaaaaaaaaaaaa");
+  //   //     this.setState({
+  //   //       cr_id: "",
+  //   //       cr_name: "",
+  //   //       cr_description: "",
+  //   //       stt: true,
+  //   //     });
+  //   //   }
+
+  //   // });
+
+  //   let check = false;
+  //   // list.map((item, index) => {
+  //   //   if (item.id == idla) {
+  //   //     this.setState({
+  //   //       cr_id: item.id,
+  //   //       cr_name: item.name,
+  //   //       cr_description: item.description,
+  //   //       stt: false,
+  //   //     });
+  //   //     check = true;
+  //   //     return;
+  //   //   }
+  //   //   if (check == false) {
+  //   //     console.log("aaaaaaaaaaaaaaa");
+  //   //     this.setState({
+  //   //       cr_id: "",
+  //   //       cr_name: "",
+  //   //       cr_description: "",
+  //   //       stt: true,
+  //   //     });
+  //   //   })
+
+  //   list.map((item, index) => {
+  //     if (item.id == idla) {
+  //       this.setState({
+  //         cr_id: item.id,
+  //         cr_name: item.name,
+  //         cr_description: item.description,
+  //         stt: false,
+  //       });
+  //       return;
+  //     }
+  //     // if (check == false) {
+  //     //   this.setState({
+  //     //     cr_id: "",
+  //     //     cr_name: "",
+  //     //     cr_description: "",
+  //     //     stt: true,
+  //     //   });
+  //     // }
+  //   });
+  // }
+
+  deleteItem = (itemx) => {
+    let currentItem = this.state.list;
+
+    currentItem = currentItem.filter((item) => item.id !== itemx);
+
+    this.setState({
+      list: currentItem,
+    });
   };
 
   BocBai = () => {
-    let { list } = this.state;
+    let list = this.state.list;
+    if (list.length == 0) {
+      toast.error("Đã hết bài");
+    }
     let name;
     let des;
-    let idla = Math.floor(Math.random() * 41); // pham vi hang chuc sua lai thanh 101
+    let idla = Math.floor(Math.random() * 6); // pham vi hang chuc sua lai thanh 101
+
+    while (idla == this.state.cr_id) {
+      idla = Math.floor(Math.random() * 6); // pham vi hang chuc sua lai thanh 101
+    }
+    let check = false;
     list.map((item, index) => {
       if (item.id === idla) {
         this.setState({
           cr_id: item.id,
           cr_name: item.name,
           cr_description: item.description,
+          stt: false,
         });
+        check = true;
+        // toast.success("Đã rút bài thành công");
+        return;
       }
+      if (check == false) {
+        // console.log("aaaaaaaaaaaaaaa");
+        // this.setState({
+        //   cr_id: "",
+        //   cr_name: "",
+        //   cr_description: "",
+        //   stt: true,
+        // });
+        this.BocBai();
+      }
+    });
+    // this.setState({
+    //   stt: false,
+    // });
+  };
+
+  setSTT = (gt) => {
+    this.setState({
+      stt: gt,
     });
   };
   render() {
@@ -277,15 +392,26 @@ class Control extends React.Component {
       <div className="menuControl">
         <ul>
           <button className="btnXoc">Xóc bài</button>
-          <button className="btnBoc" onClick={() => this.BocBai()}>
-            Bóc bài
+          {
+            <button
+              className="btnBoc"
+              disabled={!this.state.stt}
+              onClick={() => this.BocBai()}
+            >
+              Bóc bài
+            </button>
+          }
+          <button className="btnReset" onClick={() => this.choilai()}>
+            Chơi Lại
           </button>
-          <button className="btnReset">Chơi Lại</button>
         </ul>
         <BocBai
           id={this.state.cr_id}
           name={this.state.cr_name}
           des={this.state.cr_description}
+          setStt={this.setSTT}
+          stt={this.state.stt}
+          del={this.deleteItem}
         />
       </div>
     );
