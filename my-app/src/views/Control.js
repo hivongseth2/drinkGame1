@@ -355,7 +355,7 @@ class Control extends React.Component {
     //   idla = Math.floor(Math.random() * 5); // pham vi hang chuc sua lai thanh 101
     // }
     let kt = false;
-    console.log(this.state.list);
+    // console.log(this.state.list);
     list.map((item, index) => {
       if (item.id == idla) {
         this.setState({

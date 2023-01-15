@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/img/labai.png";
 import logo1 from "../assets/img/mattruoc.png";
+import ListPush from "./ListPush";
 
 import "../styles/BocBai.scss";
 
@@ -41,7 +42,7 @@ class BocBai extends React.Component {
 
   deleteCo = (item) => {
     this.props.del(item);
-    console.log(item);
+    // console.log(item);
   };
 
   render() {
@@ -64,11 +65,16 @@ class BocBai extends React.Component {
     //   name: this.props.name,
     //   description: this.props.des,
     // });
+    {
+    }
+
     return (
       <div className="BocBai">
         {/* {console.log(this.state)} */}
         {this.props.stt === true ? (
-          <img className="imgmattruoc" src={logo1}></img>
+          <>
+            <img className="imgmattruoc" src={logo1}></img>
+          </>
         ) : (
           <>
             <img className="imgLaBai" src={logo}></img>
@@ -80,8 +86,15 @@ class BocBai extends React.Component {
             <button className="btnOK" onClick={() => this.btnXacNhan()}>
               Xác nhận
             </button>
+            {/* {console.log(this.state.name)} */}
           </>
         )}
+
+        <ListPush
+          id={this.state.id}
+          name={this.state.name}
+          des={this.state.description}
+        />
       </div>
     );
   }
