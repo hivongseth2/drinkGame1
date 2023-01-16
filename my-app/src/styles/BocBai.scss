@@ -1,5 +1,6 @@
 .BocBai
 {
+    // margin-top: 200px;
     display: inline-block;
     margin-left: -200px;
     position: absolute;
@@ -7,12 +8,14 @@
     .imgmattruoc
     {
         // display: none;
+        height: 350px;
         position: relative;
 
     }
     .imgLaBai
     {
         position: relative;
+        height: 300px;
         transition: transform 0.5s; /* Thiết lập thời gian chuyển đổi */
         &:hover
         {
@@ -29,24 +32,21 @@
         .name
         {
                 position:absolute;
-                 margin-top: -120px;
-                 margin-left: 22px;
-                 font-size:30px ;
+                 margin-top: 70px;
+                 margin-left: 28px;
+                 font-size:25px ;
                  font-weight: bold;
                  width: 340px;
                  color: black;
-                
-
-               
         }
         .des
         {
                 width: 330px;
-                font-size:25px;
+                font-size:20px;
                 text-align: justify;
-                margin-left: 33px;
+                margin-left: 35px;
                 color: #333;
-                margin-top: 20px;
+                margin-top: 150px;
 
                 
         }

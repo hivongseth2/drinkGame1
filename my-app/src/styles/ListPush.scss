@@ -18,11 +18,12 @@ $dark-pri: #48287B;
   display: grid;
   place-items: center;
   background-color: $pri;
+  margin-top: -700px;
 //   height: 80;
 }
 
 .items {
-  width: 600px;
+  width: 700px;
   background: $sec;
   box-shadow: 0 3px 6px rgba(black,0.16), 0 3px 6px rgba(black,0.23);
   border-top: 20px solid $dark-pri;
