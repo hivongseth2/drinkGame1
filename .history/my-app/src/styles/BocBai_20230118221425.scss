@@ -1,0 +1,79 @@
+.BocBai
+{
+    // margin-top: 200px;
+    display: inline-block;
+    margin-left: -200px;
+    position: absolute;
+
+    .imgmattruoc
+    {
+        // display: none;
+        height: 350px;
+        position: relative;
+
+    }
+    .imgLaBai
+    {
+        position: relative;
+        height: 300px;
+        transition: transform 0.5s; /* Thiết lập thời gian chuyển đổi */
+        &:hover
+        {
+         
+
+        }
+
+    }
+    .content
+    {   
+        position: absolute;
+        margin-top: -350px;
+        margin-left: 0px;
+        .name
+        {
+                position:absolute;
+                 margin-top: 70px;
+                 margin-left: 28px;
+                 font-size:25px ;
+                 font-weight: bold;
+                 width: 340px;
+                 color: black;
+        }
+        .des
+        {
+                width: 330px;
+                font-size:20px;
+                text-align: justify;
+                margin-left: 35px;
+                color: #333;
+                margin-top: 150px;
+
+                
+        }
+    }
+    .btnOK
+    {
+         background-color: rgb(35, 63, 221);
+    color:rgb(255, 255, 255);
+    padding: 1vh;
+    border-radius: 0.5em;
+    border:none;
+    margin-left: 5px;
+    box-shadow: 0 6px 0 rgb(23, 35, 145);
+    transition: .5s;
+    &:hover
+    {
+        background-color: rgba(48, 17, 119, 0.664);
+
+    }
+
+
+    &:active
+    {
+        box-shadow: none;
+        transform: translateY(5px);
+    }
+
+    }
+}
+

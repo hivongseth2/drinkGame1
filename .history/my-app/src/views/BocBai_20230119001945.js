@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/img/labai2.png";
+import logo from "../assets/img/labai.png";
 import logo1 from "../assets/img/mattruoc.png";
 import ListPush from "./ListPush";
 
@@ -77,7 +77,7 @@ class BocBai extends React.Component {
           </>
         ) : (
           <>
-          {/* <div className="BocBai__Container">
+          <div className="BocBai__Container">
             <img className="imgLaBai" src={logo}></img>
             <div className="content">
               <div className="name">{name}</div>
@@ -87,9 +87,10 @@ class BocBai extends React.Component {
             <button className="btnOK" onClick={() => this.btnXacNhan()}>
               Xác nhận
             </button>
-          </div> */}
+            {/* {console.log(this.state.name)} */}
+          </div>
           <div className="BocBai__Container">
-            <div className="BocBai__Content" style={{ backgroundImage: `url(${logo})` }}>
+            <div className="BocBai__Content">
               <div className="name">{name}</div>
               <div className="des">{des}</div>
             </div>

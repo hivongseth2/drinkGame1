@@ -80,11 +80,10 @@
         max-width: 100%;
         aspect-ratio: 4 / 3;
         padding: 32px;
+
         background-repeat: no-repeat;
         background-size: cover;
         object-fit: cover;
-        overflow-y: auto;
-        margin: auto;
 
         .name {
             margin-top: 12px;
@@ -104,29 +103,5 @@
     .btnOK {
         margin-top: 12px;
         margin-bottom: 24px;
-    }
-}
-
-@media only screen and (max-device-width: 480px) {
-    .BocBai {
-        margin-left: 150px;
-
-        .imgmattruoc {
-            height: 250px;
-            width: 90vw;
-        }
-    }
-
-    .BocBai__Container {
-        .BocBai__Content {
-            width: 320px;
-            height: 250px;
-            // margin-left: 200px;
-        }
-    }
-
-    .items {
-        width: auto;
-        margin-left: 0;
     }
 }

@@ -60,7 +60,7 @@ class ListPush extends React.Component {
     // });
     return (
       <>
-        {/* <div className="container"> */}
+        <div className="container">
           <div className="items">
             <div className="items-head">
               <p>Bài đã bóc</p>
@@ -79,7 +79,7 @@ class ListPush extends React.Component {
               }
             })}
           </div>
-        {/* </div> */}
+        </div>
       </>
     );
   }

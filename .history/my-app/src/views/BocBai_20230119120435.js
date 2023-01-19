@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/img/labai2.png";
+import logo from "../assets/img/labai.png";
 import logo1 from "../assets/img/mattruoc.png";
 import ListPush from "./ListPush";
 

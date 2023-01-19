@@ -10,7 +10,6 @@ import Button from "react-bootstrap/Button";
 // import Form from "react-bootstrap-form";
 // import { toast, ToastContainer } from "react-toastify/dist/components";
 import { toast } from "react-toastify";
-import "../styles/bobai.scss";
 import logo from "../assets/img/bobai.png";
 
 class Control extends React.Component {

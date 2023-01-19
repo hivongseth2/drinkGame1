@@ -77,7 +77,7 @@ class BocBai extends React.Component {
           </>
         ) : (
           <>
-          {/* <div className="BocBai__Container">
+          <div className="BocBai__Container">
             <img className="imgLaBai" src={logo}></img>
             <div className="content">
               <div className="name">{name}</div>
@@ -87,7 +87,7 @@ class BocBai extends React.Component {
             <button className="btnOK" onClick={() => this.btnXacNhan()}>
               Xác nhận
             </button>
-          </div> */}
+          </div>
           <div className="BocBai__Container">
             <div className="BocBai__Content" style={{ backgroundImage: `url(${logo})` }}>
               <div className="name">{name}</div>

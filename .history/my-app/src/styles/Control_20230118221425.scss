@@ -1,79 +1,74 @@
-.btnBoc {
+.btnBoc
+{
     background-color: brown;
-    color: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
     padding: 1vh;
     border-radius: 0.5em;
-    border: none;
+    border:none;
     margin-left: 5px;
     box-shadow: 0 6px 0 rgb(100, 19, 19);
     transition: .5s;
-
-    &:hover {
+    &:hover{
         background-color: rgba(148, 46, 46, 0.863);
     }
-
-    &:active {
+    &:active
+    {
         box-shadow: none;
         transform: translateY(5px);
     }
-
+    
 }
-
-.btnXoc {
+.btnXoc
+{
     background-color: orange;
-    color: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
     padding: 1vh;
     border-radius: 0.5em;
-    border: none;
+    border:none;
     margin-left: 5px;
     box-shadow: 0 6px 0 rgb(194, 98, 9);
     transition: .5s;
-
-    &:hover {
+    &:hover
+    {
         background-color: rgba(165, 112, 12, 0.664);
 
     }
 
 
-    &:active {
+    &:active
+    {
         box-shadow: none;
         transform: translateY(5px);
     }
 
 }
 
-.btnReset {
+.btnReset
+{
     background-color: rgb(35, 63, 221);
-    color: rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
     padding: 1vh;
     border-radius: 0.5em;
-    border: none;
+    border:none;
     margin-left: 5px;
     box-shadow: 0 6px 0 rgb(23, 35, 145);
     transition: .5s;
-
-    &:hover {
+    &:hover
+    {
         background-color: rgba(48, 17, 119, 0.664);
 
     }
 
 
-    &:active {
+    &:active
+    {
         box-shadow: none;
         transform: translateY(5px);
     }
 
 }
-
-.menuControl {
+.menuControl
+{
     position: relative;
     display: inline-block;
-}
-
-.box__modal {
-    @media only screen and (max-device-width: 480px) {
-        .modal-content {
-            width: 100vw;
-        }
-    }
 }
