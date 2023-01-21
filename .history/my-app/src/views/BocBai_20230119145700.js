@@ -71,14 +71,13 @@ class BocBai extends React.Component {
     return (
       <div className="BocBai">
         {/* {console.log(this.state)} */}
-
         {this.props.stt === true ? (
           <>
             <img className="imgmattruoc" src={logo1}></img>
           </>
         ) : (
           <>
-            {/* <div className="BocBai__Container">
+          {/* <div className="BocBai__Container">
             <img className="imgLaBai" src={logo}></img>
             <div className="content">
               <div className="name">{name}</div>
@@ -89,22 +88,20 @@ class BocBai extends React.Component {
               Xác nhận
             </button>
           </div> */}
-            <div className="BocBai__Container">
-              <div
-                className="BocBai__Content"
-                style={{ backgroundImage: `url(${logo})` }}
-              >
-                <div className="name">{name}</div>
-                <div className="des">{des}</div>
-              </div>
-
-              <button className="btnOK" onClick={() => this.btnXacNhan()}>
-                Xác nhận
-              </button>
-              {/* {console.log(this.state.name)} */}
+          <div className="BocBai__Container">
+            <div className="BocBai__Content" style={{ backgroundImage: `url(${logo})` }}>
+              <div className="name">{name}</div>
+              <div className="des">{des}</div>
             </div>
+
+            <button className="btnOK" onClick={() => this.btnXacNhan()}>
+              Xác nhận
+            </button>
+            {/* {console.log(this.state.name)} */}
+          </div>
           </>
         )}
+
         <ListPush
           id={this.state.id}
           name={this.state.name}

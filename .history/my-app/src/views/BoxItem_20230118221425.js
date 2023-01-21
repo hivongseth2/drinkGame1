@@ -40,7 +40,7 @@ class BoxItem extends React.Component {
           show={this.props.isOpen}
           onHide={this.props.closeModal}
           backdrop="static"
-          className="d-xl-inline-flex justify-content-center box__modal"
+          className="d-xl-inline-flex justify-content-center "
         >
           <Modal.Header closeButton>
             <Modal.Title>Danh sách các lá bài</Modal.Title>

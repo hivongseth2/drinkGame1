@@ -1,12 +1,10 @@
 $pri: #dd71b7;
 $sec: #a136c4d0;
 $dark-pri: #48287B;
-
 * {
   box-sizing: border-radius;
   font-family: 'Rubik', sans-serif;
 }
-
 .container {
   border: 1px solid black;
   border-radius: 2%;
@@ -14,29 +12,26 @@ $dark-pri: #48287B;
   left: 500px;
   color: #ffffff;
   position: absolute;
-  //   top: 0; right: 0px; bottom: 0; left: 0;
-  //   margin: auto;
+//   top: 0; right: 0px; bottom: 0; left: 0;
+//   margin: auto;
   margin-top: -225%;
   display: grid;
   place-items: center;
   background-color: $pri;
   margin-top: -700px;
-  //   height: 80;
+//   height: 80;
 }
 
 .items {
   width: 700px;
   background: $sec;
-  box-shadow: 0 3px 6px rgba(black, 0.16), 0 3px 6px rgba(black, 0.23);
+  box-shadow: 0 3px 6px rgba(black,0.16), 0 3px 6px rgba(black,0.23);
   border-top: 20px solid $dark-pri;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-left: 300px;
 }
 
-.items-head p {
+.items-head p{
   padding: 5px 3px;
-  //   margin: 10px;
+//   margin: 10px;
   color: #f7f7f7;
   font-weight: bold;
   font-size: 25px;
@@ -44,12 +39,12 @@ $dark-pri: #48287B;
 
 .items-head hr {
   width: 20%;
-  //   margin: 0px 30px;
+//   margin: 0px 30px;
   border: 1px solid $dark-pri;
 }
 
 .items-body {
-  //   padding: 10px;
+//   padding: 10px;
   margin: 10px;
   display: grid;
   grid-gap: 10px;
@@ -65,7 +60,7 @@ $dark-pri: #48287B;
   grid-gap: 10px;
   border: 1px solid transparent;
   cursor: pointer;
-
+  
 }
 
 .items-body-content:hover {
@@ -82,12 +77,9 @@ $dark-pri: #48287B;
 }
 
 @keyframes icon {
-
-  0%,
-  100% {
+  0%,100%{
     transform: translate(0px);
   }
-
   50% {
     transform: translate(3px);
   }

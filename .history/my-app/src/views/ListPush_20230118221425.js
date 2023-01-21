@@ -18,7 +18,6 @@ class ListPush extends React.Component {
       stt: true,
     });
     this.addList();
-    console.log("component will " + this.props.name);
   }
 
   componentWillMount() {
@@ -28,7 +27,7 @@ class ListPush extends React.Component {
     this.addList();
   }
   addList = () => {
-    if ((this.props.id != "") & (this.props.id != this.state.id)) {
+    if (this.props.id != "") {
       const w = {
         id: this.props.id,
         name: this.props.name,
@@ -57,32 +56,30 @@ class ListPush extends React.Component {
     // let isEmpty = Object.keys().length === 0;
 
     let count = 0;
-    console.log("aaaaaaaaaaaaaaa" + this.state.name);
     // console.log(list);
     // });
     return (
       <>
-        {/* <div className="container"> */}
-        <div className="items">
-          <div className="items-head">
-            <p>Bài đã bóc</p>
-            <hr />
-          </div>
-          {list.map((item, index) => {
-            if (item.id != undefined) {
-              return (
-                <div className="items-body">
-                  <div className="items-body-content">
-                    <span>{`${index} - ${item.name}`}</span>
-                    <i className="fa fa-angle-right"></i>
+        <div className="container">
+          <div className="items">
+            <div className="items-head">
+              <p>Bài đã bóc</p>
+              <hr />
+            </div>
+            {list.map((item, index) => {
+              if (item.id != undefined) {
+                return (
+                  <div className="items-body">
+                    <div className="items-body-content">
+                      <span>{`${index} - ${item.name}`}</span>
+                      <i className="fa fa-angle-right"></i>
+                    </div>
                   </div>
-                </div>
-              );
-            }
-          })}
+                );
+              }
+            })}
+          </div>
         </div>
-
-        {/* </div> */}
       </>
     );
   }

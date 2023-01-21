@@ -3,6 +3,18 @@
   {
     background-color: blueviolet;
   }
+  // .modal-header{
+  //   background-color: #452a76;
+  // }
+  .modal-body{
+    background-color: #8a2be2;
+    border: #452a76 solid 2px;
+    box-shadow: 10px 30px 44px #452a76;
+  }
+  .modal-footer{
+    background-color: #8a2be2;
+
+  }
 .imgLaBai1
 {
     width: 100px;
@@ -19,7 +31,7 @@
         margin-left: -100px;
         padding-top: 10px;
         padding-left: 20px;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: bolder;
         width: 80px;
         text-align: center;

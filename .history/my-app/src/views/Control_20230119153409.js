@@ -422,9 +422,9 @@ class Control extends React.Component {
   render() {
     return (
       <div className="menuControl">
-        {/* <div>
+        <div>
           <img className="introImg" src={logo}></img>
-        </div> */}
+        </div>
         <ul>
           <button className="btnXoc" onClick={this.openModal}>
             Xóc bài

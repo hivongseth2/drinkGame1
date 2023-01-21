@@ -10,8 +10,6 @@ import Button from "react-bootstrap/Button";
 // import Form from "react-bootstrap-form";
 // import { toast, ToastContainer } from "react-toastify/dist/components";
 import { toast } from "react-toastify";
-import "../styles/bobai.scss";
-import logo from "../assets/img/bobai.png";
 
 class Control extends React.Component {
   state = {
@@ -422,9 +420,6 @@ class Control extends React.Component {
   render() {
     return (
       <div className="menuControl">
-        {/* <div>
-          <img className="introImg" src={logo}></img>
-        </div> */}
         <ul>
           <button className="btnXoc" onClick={this.openModal}>
             Xóc bài
