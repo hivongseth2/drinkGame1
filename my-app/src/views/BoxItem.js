@@ -43,7 +43,7 @@ class BoxItem extends React.Component {
           className="d-xl-inline-flex justify-content-center "
         >
           <Modal.Header closeButton>
-            <Modal.Title>Modal Form Title</Modal.Title>
+            <Modal.Title>{`Số lượng bài còn ${this.state.list.length}`}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             {/* <Form.Label>Name: </Form.Label>

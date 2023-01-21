@@ -9,20 +9,23 @@ $dark-pri: #48287B;
   border: 1px solid black;
   border-radius: 2%;
   margin-left: -100%;
-  left: 500px;
+  left: 800px;
+  // height: 100%;
   color: #ffffff;
-  position: absolute;
+  position: relative;
 //   top: 0; right: 0px; bottom: 0; left: 0;
 //   margin: auto;
-  margin-top: -225%;
-  display: grid;
+width: 100%;
+  margin-top: -880px;
+  display: flow-root  ;
+  padding-left: 0px;
   place-items: center;
   background-color: $pri;
 //   height: 80;
 }
 
 .items {
-  width: 600px;
+  width: 400px;
   background: $sec;
   box-shadow: 0 3px 6px rgba(black,0.16), 0 3px 6px rgba(black,0.23);
   border-top: 20px solid $dark-pri;
@@ -44,7 +47,7 @@ $dark-pri: #48287B;
 
 .items-body {
 //   padding: 10px;
-  margin: 10px;
+  // margin: 10px;
   display: grid;
   grid-gap: 10px;
 }

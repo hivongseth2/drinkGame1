@@ -71,6 +71,7 @@ class BocBai extends React.Component {
     return (
       <div className="BocBai">
         {/* {console.log(this.state)} */}
+
         {this.props.stt === true ? (
           <>
             <img className="imgmattruoc" src={logo1}></img>
@@ -89,7 +90,6 @@ class BocBai extends React.Component {
             {/* {console.log(this.state.name)} */}
           </>
         )}
-
         <ListPush
           id={this.state.id}
           name={this.state.name}

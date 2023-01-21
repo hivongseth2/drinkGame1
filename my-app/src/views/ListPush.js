@@ -60,7 +60,7 @@ class ListPush extends React.Component {
     // });
     return (
       <>
-        <div className="container">
+        <div className="container" style={{ padding: "0px" }}>
           <div className="items">
             <div className="items-head">
               <p>Bài đã bóc</p>

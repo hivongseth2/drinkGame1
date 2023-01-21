@@ -58,7 +58,9 @@
     padding: 1vh;
     border-radius: 0.5em;
     border:none;
-    margin-left: 5px;
+    width: 160px;
+    position: absolute;
+    margin-left: 100px;
     box-shadow: 0 6px 0 rgb(23, 35, 145);
     transition: .5s;
     &:hover
